@@ -5,6 +5,46 @@ Class {
 }
 
 { #category : #parsing }
+TGVmaxDataParser >> buildGraphFromRecords: aCollectionOfRecords [
+	| locations trains origin destination train |
+	
+	locations := Dictionary new.
+	
+	trains := aCollectionOfRecords collect: [ :record |
+		origin := locations at: record origin ifAbsentPut: [ 
+			TGVmaxLocation new
+				name: record origin;
+				iata: record originIata;
+				yourself ].
+			
+		destination := locations at: record destination ifAbsentPut: [ 
+			TGVmaxLocation new
+				name: record destination;
+				iata: record destinationIata;
+				yourself ].
+			
+		train := TGVmaxTrain new
+			trainNumber: record trainNumber;
+			origin: origin;
+			destination: destination;
+			date: record date;
+			departureTime: record departureTime;
+			arrivalTime: record arrivalTime;
+			yourself.
+			
+		origin outgoingTrains add: train.
+		destination incomingTrains add: train.
+		train ].
+	
+	locations := locations values.
+	
+	^ TGVmaxGraph new
+		locations: locations asSet;
+		trains: trains asSet;
+		yourself
+]
+
+{ #category : #parsing }
 TGVmaxDataParser >> parseRecord: aRecord [
 	| fields |
 	fields := aRecord at: 'fields'.
