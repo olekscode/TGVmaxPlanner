@@ -1,14 +1,14 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'StringMetrics',
+      #baseline : 'TGVmaxPlanner',
       #directory : 'src',
       #platforms : [ #pharo ]
     }
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'StringMetrics*' ]
+      #packages : [ 'TGVmaxPlanner*' ]
     }
   }
 }
