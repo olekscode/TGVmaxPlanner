@@ -8,6 +8,17 @@ Class {
 	#category : #TGVmaxPlanner
 }
 
+{ #category : #printing }
+TGVmaxRoundTrip >> printOn: aStream [
+	aStream
+		nextPutAll: self class name;
+		nextPut: $(;
+		nextPutAll: trainThere origin name asString;
+		nextPutAll: ' => ';
+		nextPutAll: trainThere destination name asString;
+		nextPut: $).
+]
+
 { #category : #accessing }
 TGVmaxRoundTrip >> trainBack [
 	^ trainBack

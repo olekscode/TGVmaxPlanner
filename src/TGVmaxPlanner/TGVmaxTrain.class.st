@@ -62,6 +62,17 @@ TGVmaxTrain >> origin: anObject [
 	origin := anObject
 ]
 
+{ #category : #printing }
+TGVmaxTrain >> printOn: aStream [
+	aStream
+		nextPutAll: self class name;
+		nextPut: $(;
+		nextPutAll: origin name asString;
+		nextPutAll: ' => ';
+		nextPutAll: destination name asString;
+		nextPut: $).
+]
+
 { #category : #accessing }
 TGVmaxTrain >> trainNumber [
 	^ trainNumber

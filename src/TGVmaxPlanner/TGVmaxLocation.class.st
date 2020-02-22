@@ -56,3 +56,12 @@ TGVmaxLocation >> outgoingTrains [
 TGVmaxLocation >> outgoingTrains: anObject [
 	outgoingTrains := anObject
 ]
+
+{ #category : #printing }
+TGVmaxLocation >> printOn: aStream [
+	aStream
+		nextPutAll: self class name;
+		nextPut: $(;
+		nextPutAll: name;
+		nextPut: $).
+]
