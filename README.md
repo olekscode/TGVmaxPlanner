@@ -1,7 +1,7 @@
 # TGVmaxPlanner
 
 [![Build Status](https://travis-ci.org/olekscode/TGVmaxPlanner.svg?branch=master)](https://travis-ci.org/olekscode/TGVmaxPlanner)
-[![Build status](https://ci.appveyor.com/api/projects/status/r25rfpbcq9xin235?svg=true)](https://ci.appveyor.com/project/olekscode/TGVmaxPlanner)
+[![Build status](https://ci.appveyor.com/api/projects/status/01fqf5a1xifct9re?svg=true)](https://ci.appveyor.com/project/olekscode/tgvmaxplanner)
 [![Coverage Status](https://coveralls.io/repos/github/olekscode/TGVmaxPlanner/badge.svg?branch=master)](https://coveralls.io/github/olekscode/TGVmaxPlanner?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/olekscode/TGVmaxPlanner/master/LICENSE)
 
