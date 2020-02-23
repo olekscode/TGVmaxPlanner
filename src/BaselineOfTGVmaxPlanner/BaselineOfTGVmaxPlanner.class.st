@@ -11,5 +11,6 @@ BaselineOfTGVmaxPlanner >> baseline: spec [
 		"Packages"
 		spec 
 			package: 'TGVmaxPlanner';
+			package: 'TERPlanner';
 			package: 'TGVmaxPlanner-Tests' with: [ spec requires: #('TGVmaxPlanner') ] ].
 ]
