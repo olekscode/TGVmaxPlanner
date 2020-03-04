@@ -8,14 +8,24 @@ Class {
 	#category : #SncfTgvMaxPlanner
 }
 
+{ #category : #accessing }
+SncfTgvMaxRoundTrip >> destination [
+	^ trainThere destination
+]
+
+{ #category : #accessing }
+SncfTgvMaxRoundTrip >> origin [ 
+	^ trainThere origin
+]
+
 { #category : #printing }
 SncfTgvMaxRoundTrip >> printOn: aStream [
 	aStream
 		nextPutAll: self class name;
 		nextPut: $(;
-		nextPutAll: trainThere origin name asString;
+		nextPutAll: self origin name asString;
 		nextPutAll: ' => ';
-		nextPutAll: trainThere destination name asString;
+		nextPutAll: self destination name asString;
 		nextPut: $).
 ]
 
